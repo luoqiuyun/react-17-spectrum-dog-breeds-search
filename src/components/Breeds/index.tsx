@@ -12,7 +12,8 @@ const Breeds = () => {
   const handleScroll: EventListener = (e: Event) => {
     const div = innerRef.current;
     if (!!div) {
-      if (div.scrollTop > (250 * currentPage * 20)) {
+      if (div.scrollTop > (250 * currentPage * 20 - 500)) {
+        //console.log(`${div.scrollTop}  >=  ${250 * currentPage * 20 - 500}`);
         setCurrentPage(currentPage + 1);
       } 
     }
