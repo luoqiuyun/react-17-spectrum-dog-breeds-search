@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import BreedsSearch from "./BreedsSearch";
-import { breedsStyle, PAGE_SIZE } from "./helper/config";
+import { breedsStyle, PAGE_SIZE, ROW_HEIGHT } from "./helper/config";
 import { shouldLoadMore, formatData } from "./helper/utils";
 
 const Breeds = () => {
@@ -12,7 +12,7 @@ const Breeds = () => {
   const handleScroll: EventListener = (e: Event) => {
     const div = innerRef.current;
     if (!!div) {
-      if (div.scrollTop > (250 * currentPage * 20 - 500)) {
+      if (div.scrollTop > (ROW_HEIGHT * currentPage * PAGE_SIZE - 2 * ROW_HEIGHT)) {
         //console.log(`${div.scrollTop}  >=  ${250 * currentPage * 20 - 500}`);
         setCurrentPage(currentPage + 1);
       } 

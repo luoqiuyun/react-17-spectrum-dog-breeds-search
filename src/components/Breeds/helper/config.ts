@@ -38,6 +38,7 @@ const noResults = [{
 }];
 
 const PAGE_SIZE = 20;
+const ROW_HEIGHT = 250;
 const NO_BREED_GROUP = "zero";
 
 export {
@@ -45,5 +46,6 @@ export {
   breedsStyle,
   noResults,
   PAGE_SIZE,
+  ROW_HEIGHT,
   NO_BREED_GROUP,
 };
